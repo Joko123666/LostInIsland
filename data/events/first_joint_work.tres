@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "first_joint_work"
+display_name = "첫 공동 작업"
+event_type = "relationship"
+trigger_conditions = {"fact": "first_joint_work"}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["작업을 맞춰 하다 보니 말보다 손짓이 먼저 통한다.", "완벽하진 않아도 둘이 만든 결과물은 혼자 만든 것보다 오래 기억될 것 같다."])
+choices = Array[Dictionary]([{"text": "수고했다고 말한다.", "result_text": "짧은 말이지만 서로에게 힘이 되었다.", "results": {"partner": {"mood": 4, "trust": 3, "affection": 3}, "player": {"mood": 2}, "memories": [{"id": "first_joint_work", "text": "처음으로 손을 맞춰 하나의 일을 끝냈다.", "icon": "actions/assist", "importance": 2}]}}])
+results = {}

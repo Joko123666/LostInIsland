@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "survival_guide"
+display_name = "생존 가이드"
+description = "물과 먹을 것, 밤을 넘길 장소, 불씨와 도구의 순서를 짧게 적은 얇은 책."
+category = "guide"
+stackable = false
+max_stack = 1
+weight = 0.2
+durability = -1
+tags = Array[String](["guide", "starter"])
+effects = {}
+icon_path = "res://assets/icons/items/survival_guide.png"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/crafting/craft_recipe.gd" id="1_recipe"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "water_bucket"
+display_name = "물통"
+category = "facility"
+required_station = ""
+required_items = {"wood": 2, "fiber": 2}
+required_skills = {}
+result_items = {"water_bucket": 1}
+stamina_cost = 10
+time_cost = 1
+base_success_rate = 1.0
+can_partner_assist = false
+unlock_conditions = {}

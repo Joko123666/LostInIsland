@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "partner_reunion"
+display_name = "파트너 재회"
+event_type = "fixed"
+trigger_conditions = {"region": "meadow"}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["풀숲 너머에서 익숙한 목소리가 들린다.", "서로 다친 곳을 확인한 뒤, 둘은 혼자가 아니라는 사실에 잠시 말을 잃는다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "", "text": "풀숲이 낮게 흔들린다. 바람 소리 사이로 익숙한 숨소리가 섞인다.", "tone": "mystery", "left_image": "player", "focus": "left"}, {"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "???", "text": "거기... 누구야?", "tone": "warm", "left_image": "player", "right_image": "partner", "focus": "right"}, {"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "플레이어", "text": "살아 있었구나. 다친 곳은 없어?", "tone": "relief", "left_image": "player", "right_image": "partner", "focus": "left"}])
+choices = Array[Dictionary]([{"text": "함께 동굴을 찾아보자고 말한다.", "result_text": "파트너가 고개를 끄덕였다. 이제 둘이 함께 움직인다.", "cutscene_steps": [{"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "{result_text}", "tone": "relief", "left_image": "player", "right_image": "partner", "focus": "right"}], "results": {"join_partner": true, "partner": {"mood": 5, "trust": 5, "affection": 5}, "flags": ["partner_reunion"], "memories": [{"id": "partner_reunion", "text": "풀숲 너머에서 서로를 다시 찾았다.", "icon": "actions/talk", "importance": 3}]}}])
+results = {}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "workbench"
+display_name = "작업대"
+description = "도구와 건설 재료를 안정적으로 가공할 수 있는 작업 공간."
+category = "facility"
+stackable = true
+max_stack = 2
+weight = 4.0
+durability = -1
+tags = Array[String](["placeable", "station", "building"])
+effects = {}
+icon_path = "res://assets/icons/items/workbench.png"

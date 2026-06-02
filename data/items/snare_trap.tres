@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "snare_trap"
+display_name = "올가미 덫"
+description = "동물 흔적이 있는 길목에 숨겨 두는 간단한 덫. 설치한 뒤 하루가 지나면 확인할 수 있다."
+category = "tool"
+stackable = true
+max_stack = 9
+weight = 0.35
+durability = -1
+tags = Array[String](["tool", "trap", "hunting"])
+effects = {}
+icon_path = "res://assets/icons/items/snare_trap.png"

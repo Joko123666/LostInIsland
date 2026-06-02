@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[node name="RegionPopup" type="Window"]
+title = "지역 행동"
+size = Vector2i(420, 320)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 56.0
+text = "RegionPopup placeholder - Main.tscn에서 지역 행동 UI를 구성합니다."
+autowrap_mode = 2

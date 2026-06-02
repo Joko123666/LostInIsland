@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "medkit"
+display_name = "구급키트"
+description = "작은 응급 처치 세트. 상처를 누르고 몸을 정돈할 여지를 만들어 준다."
+category = "consumable"
+stackable = false
+max_stack = 1
+weight = 0.6
+durability = -1
+tags = Array[String](["medical", "starter"])
+effects = {"hp": 28, "hygiene": 10, "mood": 2}
+icon_path = "res://assets/icons/items/medkit.png"

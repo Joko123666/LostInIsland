@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/crafting/craft_recipe.gd" id="1_recipe"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "stone_oven"
+display_name = "돌 화덕"
+category = "facility"
+required_station = ""
+required_items = {"stone": 6, "clay": 3, "wood": 2}
+required_skills = {}
+result_items = {"stone_oven": 1}
+stamina_cost = 18
+time_cost = 3
+base_success_rate = 1.0
+can_partner_assist = true
+unlock_conditions = {}

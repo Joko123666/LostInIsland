@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "mud_wall"
+display_name = "흙벽"
+description = "점토와 잎으로 보강한 벽. 거점 안정과 비바람 저항을 높인다."
+category = "facility"
+stackable = true
+max_stack = 4
+weight = 5.0
+durability = -1
+tags = Array[String](["placeable", "shelter", "building"])
+effects = {}
+icon_path = "res://assets/icons/items/mud_wall.png"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PartnerPersonality" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/partner_personality.gd" id="1_personality"]
+
+[resource]
+script = ExtResource("1_personality")
+id = "optimistic"
+display_name = "낙천적"
+description = "감정 회복이 빠르고 갈등을 부드럽게 넘기지만 위험 판단이 느슨하다."
+stat_modifiers = {"mood_recovery": 1}
+state_resistances = {"loneliness": 1}
+preferred_gifts = Array[String](["berry", "campfire"])
+disliked_gifts = Array[String](["stone"])
+event_tags = Array[String](["warm", "conflict_relief"])

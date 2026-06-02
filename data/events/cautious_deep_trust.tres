@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "cautious_deep_trust"
+display_name = "기다려주는 사람"
+event_type = "personality"
+trigger_conditions = {"personality": "cautious", "trigger": "action", "stage": 3, "requires_flags": ["cautious_shared_watch"], "not_flags": ["cautious_deep_trust"], "trust_min": 25, "mood_min": 40, "actions": ["talk", "rest", "gift", "partner_comfort", "craft"]}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["해가 기울 무렵, 파트너가 먼저 말을 꺼낸다.", "이 섬에서 무언가를 믿는 일은 위험하지만, 둘 사이에는 작은 예외가 생겼다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "처음엔 네가 앞서가면 또 혼자가 될까 봐 무서웠어.", "tone": "warm", "left_image": "player", "right_image": "partner", "focus": "right"}, {"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "이제는 기다려 줄 거라는 걸 알아. 그래서 나도 조금 더 멀리 볼 수 있어.", "tone": "relief", "left_image": "player", "right_image": "partner", "focus": "right"}])
+choices = Array[Dictionary]([{"text": "나도 네가 있어서 버틴다고 답한다.", "result_text": "짧은 대답 뒤로 긴 침묵이 흘렀지만, 이번 침묵은 불안하지 않았다.", "results": {"partner": {"mood": 6, "trust": 8, "affection": 8}, "player": {"mood": 3}, "flags": ["cautious_deep_trust"], "memories": [{"id": "cautious_deep_trust", "text": "서로가 있어서 버틴다고 처음으로 분명히 답했다.", "icon": "status/trust", "importance": 3}]}}, {"text": "앞으로도 서로 확인하며 움직이자고 한다.", "result_text": "둘은 앞으로 나아갈 때의 작은 약속을 정했다. 멀어지기 전에는 반드시 돌아보기로.", "results": {"partner": {"mood": 4, "trust": 7, "affection": 5}, "flags": ["cautious_deep_trust"], "memories": [{"id": "cautious_deep_trust", "text": "멀어지기 전에는 반드시 돌아보기로 약속했다.", "icon": "actions/assist", "importance": 3}]}}])
+results = {}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "simple_fishing_rod"
+display_name = "간단한 낚싯대"
+description = "휘어진 나뭇가지와 섬유로 급히 만든 낚싯대. 얕은 물가에서 생선을 노릴 수 있게 해준다."
+category = "tool"
+stackable = true
+max_stack = 2
+weight = 0.6
+durability = 18
+tags = Array[String](["tool", "fishing_rod"])
+effects = {"fish_action": 1}
+icon_path = "res://assets/icons/items/simple_fishing_rod.png"

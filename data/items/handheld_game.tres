@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "handheld_game"
+display_name = "오락기"
+description = "낡은 휴대용 오락기. 배터리는 오래가지 않지만 밤의 불안과 침묵을 잠깐 밀어낸다."
+category = "tool"
+stackable = false
+max_stack = 1
+weight = 0.5
+durability = 12
+tags = Array[String](["tool", "comfort", "reusable", "starter"])
+effects = {"mood": 10}
+icon_path = "res://assets/icons/items/handheld_game.png"

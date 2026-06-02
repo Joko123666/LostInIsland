@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RegionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/region_data.gd" id="1_region"]
+
+[resource]
+script = ExtResource("1_region")
+id = "forest"
+display_name = "숲"
+description = "목재와 열매가 풍부하지만 시야가 좁고 길을 잃기 쉽다."
+region_type = "forest"
+development = 0
+investigation = 0
+resource_capacity = {"wood": 8, "berry": 3, "fiber": 3, "vine": 3, "palm_frond": 2}
+resource_maximums = {"wood": 10, "berry": 4, "fiber": 5, "vine": 5, "palm_frond": 3}
+connected_regions = Array[String](["meadow", "cave", "river"])
+is_special = false
+is_enterable = false
+allowed_actions = Array[String](["investigate", "gather", "rest", "develop"])
+event_pool = Array[String](["first_conflict"])
+danger_level = 3
+icon_path = "res://assets/sprites/regions/forest.svg"
+image_path = "res://assets/generated/regions/region_forest.png"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "drying_rack"
+display_name = "건조대"
+description = "생선과 식물을 말릴 수 있는 간단한 틀."
+category = "facility"
+stackable = true
+max_stack = 3
+weight = 2.0
+durability = -1
+tags = Array[String](["placeable", "station", "food"])
+effects = {}
+icon_path = "res://assets/icons/items/drying_rack.png"

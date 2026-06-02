@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StateDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/state_definition.gd" id="1_state"]
+
+[resource]
+script = ExtResource("1_state")
+id = "wound"
+display_name = "상처"
+description = "거친 지형이나 작업 중 다쳤다. 위생이 낮으면 더 나빠질 수 있다."
+duration_days = 2
+modifiers = {"hp_recovery": -4, "danger_success": -5}
+tags = Array[String](["body", "injury", "risk"])

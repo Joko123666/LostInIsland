@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "cooked_fish"
+display_name = "구운 생선"
+description = "모닥불에 구운 생선. 허기를 크게 채우고 마음도 조금 안정된다."
+category = "food"
+stackable = true
+max_stack = 99
+weight = 0.35
+durability = -1
+tags = Array[String](["food", "fish", "cooked"])
+effects = {"hunger": 30, "stamina": 16, "mood": 3}
+icon_path = "res://assets/icons/items/cooked_fish.png"

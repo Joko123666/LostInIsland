@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "stone_axe"
+display_name = "돌도끼"
+description = "목재 채집과 거점 개발을 조금 더 안정적으로 만드는 조악한 도구."
+category = "tool"
+stackable = true
+max_stack = 3
+weight = 1.0
+durability = 30
+tags = Array[String](["tool", "axe"])
+effects = {"gather_wood_bonus": 1}
+icon_path = "res://assets/icons/items/stone_axe.png"

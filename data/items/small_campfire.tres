@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "small_campfire"
+display_name = "작은 모닥불"
+description = "마른 잎과 잔가지로 빠르게 붙인 불. 온기와 조리는 가능하지만 오래 버티기 어렵다."
+category = "facility"
+stackable = true
+max_stack = 5
+weight = 1.0
+durability = -1
+tags = Array[String](["placeable", "warmth", "fire", "facility"])
+effects = {"warmth": 1, "food_processing": 1}
+icon_path = "res://assets/icons/items/campfire.png"

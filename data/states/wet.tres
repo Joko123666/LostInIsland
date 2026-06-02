@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StateDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/state_definition.gd" id="1_state"]
+
+[resource]
+script = ExtResource("1_state")
+id = "wet"
+display_name = "젖음"
+description = "비와 물가 행동으로 몸이 젖었다. 오래 방치하면 기력과 감정 회복이 둔해진다."
+duration_days = 1
+modifiers = {"stamina_recovery": -4, "mood_recovery": -1}
+tags = Array[String](["body", "weather", "risk"])

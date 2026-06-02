@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "storage_box"
+display_name = "보관함"
+description = "흩어진 물건을 정리하는 나무 상자. 거점 보관 용량을 늘린다."
+category = "furniture"
+stackable = true
+max_stack = 5
+weight = 2.0
+durability = -1
+tags = Array[String](["placeable", "storage", "furniture"])
+effects = {"storage": 12}
+icon_path = "res://assets/icons/items/storage_box.png"

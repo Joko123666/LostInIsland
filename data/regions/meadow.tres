@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RegionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/region_data.gd" id="1_region"]
+
+[resource]
+script = ExtResource("1_region")
+id = "meadow"
+display_name = "초원"
+description = "바람이 잘 통하는 풀밭. 먹을 수 있는 열매와 질긴 섬유를 찾기 쉽다."
+region_type = "meadow"
+development = 0
+investigation = 0
+resource_capacity = {"berry": 5, "fiber": 5, "palm_frond": 3, "stone": 1}
+resource_maximums = {"berry": 6, "fiber": 7, "palm_frond": 5, "stone": 2}
+connected_regions = Array[String](["beach", "forest", "river"])
+is_special = false
+is_enterable = false
+allowed_actions = Array[String](["investigate", "gather", "rest", "develop"])
+event_pool = Array[String](["partner_reunion"])
+danger_level = 1
+icon_path = "res://assets/sprites/regions/meadow.svg"
+image_path = "res://assets/generated/regions/region_meadow.png"

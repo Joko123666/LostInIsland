@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RegionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/region_data.gd" id="1_region"]
+
+[resource]
+script = ExtResource("1_region")
+id = "river"
+display_name = "강"
+description = "맑은 물이 흐르는 좁은 강가. 식수 확보와 젖은 점토의 흔적을 기대할 수 있다."
+region_type = "river"
+development = 0
+investigation = 0
+resource_capacity = {"water": 6, "stone": 2, "fiber": 2, "fish": 5, "clay": 3, "vine": 2}
+resource_maximums = {"water": 8, "stone": 3, "fiber": 3, "fish": 6, "clay": 5, "vine": 3}
+connected_regions = Array[String](["meadow", "forest"])
+is_special = false
+is_enterable = false
+allowed_actions = Array[String](["investigate", "gather", "fish", "rest", "develop"])
+event_pool = Array[String](["first_rain"])
+danger_level = 2
+icon_path = "res://assets/sprites/regions/river.svg"
+image_path = "res://assets/generated/regions/region_river.png"

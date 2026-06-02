@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "stone_knife"
+display_name = "돌칼"
+description = "잎, 덩굴, 섬유를 자르기 쉬운 조악한 칼."
+category = "tool"
+stackable = true
+max_stack = 3
+weight = 0.45
+durability = 24
+tags = Array[String](["tool", "knife"])
+effects = {"gather_fiber_bonus": 1}
+icon_path = "res://assets/icons/items/stone_knife.png"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PartnerPersonality" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/partner_personality.gd" id="1_personality"]
+
+[resource]
+script = ExtResource("1_personality")
+id = "cautious"
+display_name = "신중함"
+description = "위험 행동 실패율은 줄지만 새로운 장소에서는 불안이 쌓이기 쉽다."
+stat_modifiers = {"danger_failure_reduction": 1}
+state_resistances = {"injury": 1}
+preferred_gifts = Array[String](["water", "simple_bed"])
+disliked_gifts = Array[String](["fiber"])
+event_tags = Array[String](["careful", "anxious"])

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "stone_oven"
+display_name = "돌 화덕"
+description = "돌과 진흙으로 열을 붙잡는 화덕. 요리와 장시간 작업에 가장 안정적이다."
+category = "facility"
+stackable = true
+max_stack = 2
+weight = 5.0
+durability = -1
+tags = Array[String](["placeable", "warmth", "fire", "station", "facility"])
+effects = {"warmth": 2, "comfort": 1, "work_efficiency": 2, "food_processing": 4}
+icon_path = "res://assets/icons/items/campfire.png"

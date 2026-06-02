@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "vine"
+display_name = "덩굴"
+description = "묶거나 엮을 수 있는 질긴 덩굴. 밧줄 제작에 좋다."
+category = "resource"
+stackable = true
+max_stack = 99
+weight = 0.2
+durability = -1
+tags = Array[String](["resource", "plant", "binding"])
+effects = {}
+icon_path = "res://assets/icons/items/vine.png"

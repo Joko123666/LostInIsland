@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="LostInIsland"
+run/main_scene="res://scenes/main/Main.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://scripts/managers/game_state.gd"
+InventoryManager="*res://scripts/managers/inventory_manager.gd"
+CharacterManager="*res://scripts/managers/character_manager.gd"
+WorldManager="*res://scripts/managers/world_manager.gd"
+CraftingManager="*res://scripts/managers/crafting_manager.gd"
+BaseManager="*res://scripts/managers/base_manager.gd"
+EventManager="*res://scripts/managers/event_manager.gd"
+SaveManager="*res://scripts/managers/save_manager.gd"
+DialogueManager="*res://scripts/managers/dialogue_manager.gd"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

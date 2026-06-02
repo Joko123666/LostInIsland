@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RegionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/region_data.gd" id="1_region"]
+
+[resource]
+script = ExtResource("1_region")
+id = "cave"
+display_name = "동굴"
+description = "비바람을 막아주는 초반 거점. 안쪽 벽에는 이상한 홈과 희미한 문양이 있다."
+region_type = "cave"
+development = 20
+investigation = 0
+resource_capacity = {"stone": 4, "water": 1, "clay": 2}
+resource_maximums = {"stone": 5, "water": 2, "clay": 3}
+connected_regions = Array[String](["beach", "forest"])
+is_special = true
+is_enterable = true
+allowed_actions = Array[String](["investigate", "gather", "rest", "develop"])
+event_pool = Array[String](["strange_marking"])
+danger_level = 2
+icon_path = "res://assets/sprites/regions/cave.svg"
+image_path = "res://assets/generated/regions/region_cave.png"

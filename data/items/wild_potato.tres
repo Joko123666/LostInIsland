@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "wild_potato"
+display_name = "야생 감자"
+description = "흙 속에서 캔 작은 덩이줄기. 생으로도 먹을 수 있지만 불에 익히면 더 든든하다."
+category = "food"
+stackable = true
+max_stack = 99
+weight = 0.25
+durability = -1
+tags = Array[String](["food", "plant", "gift"])
+effects = {"hunger": 16, "stamina": 3, "mood": -1}
+icon_path = "res://assets/icons/items/wild_potato.png"

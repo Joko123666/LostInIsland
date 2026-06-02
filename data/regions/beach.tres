@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="RegionData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/region_data.gd" id="1_region"]
+
+[resource]
+script = ExtResource("1_region")
+id = "beach"
+display_name = "해변"
+description = "난파 후 처음 눈을 뜬 곳. 표류품과 조개, 젖은 나뭇가지가 밀려온다."
+region_type = "beach"
+development = 0
+investigation = 0
+resource_capacity = {"wood": 4, "palm_frond": 4, "stone": 2, "fiber": 2, "fish": 2}
+resource_maximums = {"wood": 6, "palm_frond": 6, "stone": 3, "fiber": 4, "fish": 3}
+connected_regions = Array[String](["meadow", "cave"])
+is_special = false
+is_enterable = true
+allowed_actions = Array[String](["investigate", "gather", "fish", "rest"])
+event_pool = Array[String](["partner_reunion"])
+danger_level = 1
+icon_path = "res://assets/sprites/regions/beach.svg"
+image_path = "res://assets/generated/regions/region_beach.png"

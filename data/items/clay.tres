@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "clay"
+display_name = "점토"
+description = "물을 머금은 흙. 벽, 받침, 간단한 용기 제작에 쓸 수 있다."
+category = "resource"
+stackable = true
+max_stack = 99
+weight = 0.6
+durability = -1
+tags = Array[String](["resource", "earth", "building"])
+effects = {}
+icon_path = "res://assets/icons/items/clay.png"

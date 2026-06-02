@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "first_rain"
+display_name = "첫 폭우"
+event_type = "fixed"
+trigger_conditions = {"weather": "rain"}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["하늘이 빠르게 어두워지고 굵은 빗방울이 떨어진다.", "비를 피할 장소와 마실 물을 확보하는 일이 갑자기 더 중요해졌다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_first_rain.png", "speaker": "", "text": "하늘빛이 갑자기 낮아진다. 나뭇잎 끝에서 차가운 물방울이 굵게 떨어진다.", "tone": "rain", "flash": true}, {"background": "res://assets/generated/cutscenes/cutscene_first_rain.png", "speaker": "플레이어", "text": "이 비가 오래 가면 몸이 먼저 식겠어.", "tone": "rain", "left_image": "player", "focus": "left"}])
+choices = Array[Dictionary]([{"text": "빗물을 받아두고 무리하지 않는다.", "result_text": "비는 위협이었지만 오늘만큼은 식수를 남겼다.", "results": {"items": {"water": 2}, "partner": {"mood": 1}}}, {"text": "계속 움직이자고 한다.", "result_text": "비를 뚫고 움직였지만 몸이 무거워졌다.", "results": {"player": {"stamina": -10}, "partner": {"mood": -3, "stamina": -8}}}])
+results = {}

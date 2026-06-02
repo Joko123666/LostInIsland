@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "strange_marking"
+display_name = "이상한 문양 발견"
+event_type = "ruin"
+trigger_conditions = {"region": "cave", "investigation": 20}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["동굴 안쪽 벽을 닦아내자 자연적으로 생긴 것 같지 않은 문양이 드러난다.", "파트너는 그 문양을 보고 이유 없이 숨을 고른다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_strange_marking.png", "speaker": "", "text": "젖은 흙을 걷어내자 벽 안쪽의 선이 천천히 이어진다.", "tone": "mystery", "flash": true}, {"background": "res://assets/generated/cutscenes/cutscene_strange_marking.png", "speaker": "파트너", "text": "이건... 누가 남긴 거지?", "tone": "mystery", "left_image": "player", "right_image": "partner", "focus": "right", "shake": true}])
+choices = Array[Dictionary]([{"text": "문양을 기록한다.", "result_text": "섬에 단순한 생존 이상의 무언가가 있다는 단서가 남았다.", "results": {"items": {"stone": 1}, "partner": {"trust": 2}, "flags": ["found_strange_marking"]}}, {"text": "오늘은 깊이 파고들지 않는다.", "result_text": "문양은 기억 속에 남았지만 우선 생존을 택했다.", "results": {"partner": {"mood": 2}, "flags": ["found_strange_marking"]}}])
+results = {}

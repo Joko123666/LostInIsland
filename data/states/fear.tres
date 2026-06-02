@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="StateDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/state_definition.gd" id="1_state"]
+
+[resource]
+script = ExtResource("1_state")
+id = "fear"
+display_name = "공포"
+description = "위험 지역에서 판단이 흐려진다."
+duration_days = 1
+modifiers = {"danger_success": -10}
+tags = Array[String](["mind", "risk"])

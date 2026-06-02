@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PartnerPersonality" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/character/partner_personality.gd" id="1_personality"]
+
+[resource]
+script = ExtResource("1_personality")
+id = "curious"
+display_name = "호기심 많음"
+description = "조사와 유적 이벤트에 강하지만 예상 밖의 위험을 끌어들이기 쉽다."
+stat_modifiers = {"investigation_bonus": 2}
+state_resistances = {"fear": -1}
+preferred_gifts = Array[String](["stone_axe", "berry"])
+disliked_gifts = Array[String](["water_bucket"])
+event_tags = Array[String](["ruin", "risk"])

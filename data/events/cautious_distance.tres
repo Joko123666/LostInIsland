@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "cautious_distance"
+display_name = "신중한 거리"
+event_type = "personality"
+trigger_conditions = {"personality": "cautious", "trigger": "action", "stage": 1, "requires_flags": ["partner_reunion"], "not_flags": ["cautious_distance"], "trust_min": 8, "actions": ["talk", "rest", "gift", "partner_comfort", "partner_check"]}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["같이 움직이기로 했지만 파트너는 아직 한 걸음 뒤에서 주변을 살핀다.", "그 조심스러운 침묵은 불신이라기보다, 다시 잃고 싶지 않다는 긴장에 가깝다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "미안. 자꾸 뒤를 보게 돼.", "tone": "quiet", "left_image": "player", "right_image": "partner", "focus": "right"}, {"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "그래도... 네가 먼저 멀어지지만 않으면 따라갈게.", "tone": "warm", "left_image": "player", "right_image": "partner", "focus": "right"}])
+choices = Array[Dictionary]([{"text": "서두르지 않아도 된다고 말한다.", "result_text": "파트너는 작게 고개를 끄덕였다. 둘 사이의 걸음이 조금 가까워졌다.", "results": {"partner": {"mood": 3, "trust": 4, "affection": 3}, "player": {"mood": 1}, "flags": ["cautious_distance"], "memories": [{"id": "cautious_distance", "text": "서두르지 않아도 된다고 말하며 서로의 걸음을 맞췄다.", "icon": "actions/talk", "importance": 2}]}}, {"text": "주변을 같이 확인하자고 한다.", "result_text": "둘은 짧게 주변을 확인했다. 말은 적었지만 같은 방향을 보기 시작했다.", "results": {"partner": {"mood": 1, "trust": 3, "affection": 1}, "flags": ["cautious_distance"], "memories": [{"id": "cautious_distance", "text": "말 대신 주변을 함께 확인하며 같은 방향을 보기 시작했다.", "icon": "actions/investigate", "importance": 2}]}}])
+results = {}

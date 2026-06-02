@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/crafting/craft_recipe.gd" id="1_recipe"]
+
+[resource]
+script = ExtResource("1_recipe")
+id = "drying_rack"
+display_name = "건조대"
+category = "facility"
+required_station = ""
+required_items = {"wood": 3, "rope": 1, "fiber": 2}
+required_skills = {}
+result_items = {"drying_rack": 1}
+stamina_cost = 10
+time_cost = 2
+base_success_rate = 1.0
+can_partner_assist = true
+unlock_conditions = {}

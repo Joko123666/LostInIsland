@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "cautious_shared_watch"
+display_name = "같은 곳을 보는 법"
+event_type = "personality"
+trigger_conditions = {"personality": "cautious", "trigger": "action", "stage": 2, "requires_flags": ["cautious_distance"], "not_flags": ["cautious_shared_watch"], "trust_min": 15, "actions": ["investigate", "gather", "develop", "craft", "rest"], "together": true}
+weight = 1
+once = true
+cooldown_days = 0
+dialogue_lines = Array[String](["함께 손을 맞추는 시간이 늘자 파트너는 먼저 위험한 곳을 짚기 시작한다.", "신중함은 발목을 잡는 성격이 아니라, 둘이 살아남기 위해 나누는 감각이 되어 간다."])
+cutscene_autoplay = true
+cutscene_steps = Array[Dictionary]([{"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "파트너", "text": "잠깐. 저쪽은 발자국이 끊겨 있어.", "tone": "quiet", "left_image": "player", "right_image": "partner", "focus": "right"}, {"background": "res://assets/generated/cutscenes/cutscene_partner_reunion.png", "speaker": "플레이어", "text": "네가 봐줘서 살았네. 이제 내가 놓치는 걸 네가 잡아주는구나.", "tone": "relief", "left_image": "player", "right_image": "partner", "focus": "left"}])
+choices = Array[Dictionary]([{"text": "앞으로도 위험한 곳은 먼저 알려달라고 한다.", "result_text": "파트너는 처음으로 조금 확실하게 대답했다. 둘의 역할이 생기기 시작했다.", "results": {"partner": {"mood": 3, "trust": 5, "affection": 2}, "flags": ["cautious_shared_watch"], "memories": [{"id": "cautious_shared_watch", "text": "위험한 곳을 먼저 알려달라는 둘만의 역할을 정했다.", "icon": "status/fear", "importance": 2}]}}, {"text": "네 판단을 믿겠다고 말한다.", "result_text": "파트너의 표정이 잠시 흔들렸다가, 조심스럽게 안정된다.", "results": {"partner": {"mood": 2, "trust": 6, "affection": 2}, "player": {"mood": 1}, "flags": ["cautious_shared_watch"], "memories": [{"id": "cautious_shared_watch", "text": "파트너의 위험 판단을 믿겠다고 말했다.", "icon": "status/trust", "importance": 2}]}}])
+results = {}

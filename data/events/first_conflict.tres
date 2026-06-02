@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/events/event_data.gd" id="1_event"]
+
+[resource]
+script = ExtResource("1_event")
+id = "first_conflict"
+display_name = "첫 갈등"
+event_type = "conflict"
+trigger_conditions = {"partner_mood_below": 30}
+weight = 1
+once = true
+cooldown_days = 2
+dialogue_lines = Array[String](["파트너가 오늘 일정이 너무 무리였다고 털어놓는다.", "섬에서 살아남아야 한다는 말만으로는 지친 마음을 달래기 어렵다."])
+choices = Array[Dictionary]([{"text": "사과하고 함께 쉬자고 한다.", "result_text": "오늘은 멈추기로 했다. 불안은 남았지만 서로를 탓하진 않았다.", "results": {"partner": {"mood": 10, "trust": 3, "affection": 2}, "player": {"stamina": 8}, "memories": [{"id": "first_conflict_repaired", "text": "무리한 일정 뒤, 멈추고 사과하는 쪽을 택했다.", "icon": "actions/rest", "importance": 2}]}}, {"text": "지금은 버텨야 한다고 설득한다.", "result_text": "말은 이어졌지만 거리는 조금 벌어졌다.", "results": {"partner": {"mood": -4, "trust": -2, "affection": -2}, "memories": [{"id": "first_conflict_pushed", "text": "지친 파트너에게 지금은 버텨야 한다고 말했다.", "icon": "status/fatigue", "importance": 2}]}}])
+results = {}

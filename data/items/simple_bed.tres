@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "simple_bed"
+display_name = "간이침대"
+description = "잠자리를 바닥에서 조금 띄운다. 회복과 감정 안정에 도움이 된다."
+category = "furniture"
+stackable = true
+max_stack = 3
+weight = 2.5
+durability = -1
+tags = Array[String](["placeable", "comfort", "furniture"])
+effects = {"comfort": 2, "stability": 1}
+icon_path = "res://assets/icons/items/simple_bed.png"

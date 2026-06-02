@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "wooden_spear"
+display_name = "나무창"
+description = "끝을 단단히 묶은 조악한 창. 짐승의 흔적을 따라갈 때 최소한의 거리를 벌려 준다."
+category = "tool"
+stackable = true
+max_stack = 2
+weight = 1.2
+durability = 24
+tags = Array[String](["tool", "hunting", "spear"])
+effects = {"hunt_action": 1}
+icon_path = "res://assets/icons/items/wooden_spear.png"

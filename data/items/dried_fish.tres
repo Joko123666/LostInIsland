@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1_item"]
+
+[resource]
+script = ExtResource("1_item")
+id = "dried_fish"
+display_name = "말린 생선"
+description = "건조대에서 말린 생선. 보존성이 좋고 기력을 어느 정도 회복한다."
+category = "food"
+stackable = true
+max_stack = 99
+weight = 0.25
+durability = -1
+tags = Array[String](["food", "fish", "preserved"])
+effects = {"hunger": 24, "stamina": 10, "mood": 1}
+icon_path = "res://assets/icons/items/dried_fish.png"

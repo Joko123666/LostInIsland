@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Local exports and runtime saves
+/build/
+/saves/
+
+# Local/editor noise
+*.tmp
+*.log
