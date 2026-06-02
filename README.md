@@ -2,6 +2,10 @@
 
 Godot 4.6 기반의 섬 생존 게임 프로토타입입니다. 플레이어는 조사, 채집, 제작, 휴식, 수면, 거점 관리, 파트너 상호작용을 통해 섬에서 생존합니다.
 
+## Shared Context
+
+새 대화나 새 작업 세션에서 이어서 작업할 때는 먼저 [docs/SHARED_CONTEXT.md](docs/SHARED_CONTEXT.md)를 읽습니다.
+
 ## Requirements
 
 - Godot `4.6.3-stable`
