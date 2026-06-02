@@ -1,0 +1,46 @@
+name: Godot smoke tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: Headless project and smoke tests
+    runs-on: ubuntu-latest
+
+    env:
+      GODOT_VERSION: 4.6.3
+      GODOT_STATUS: stable
+      GODOT_BIN: ./Godot_v4.6.3-stable_linux.x86_64
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Godot
+        run: |
+          curl -L -o godot.zip "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-${GODOT_STATUS}/Godot_v${GODOT_VERSION}-${GODOT_STATUS}_linux.x86_64.zip"
+          unzip -q godot.zip
+          chmod +x "${GODOT_BIN}"
+
+      - name: Import project
+        run: |
+          "${GODOT_BIN}" --headless --path . --editor --quit
+
+      - name: Three day survival smoke
+        run: |
+          "${GODOT_BIN}" --headless --path . --script scripts/tests/three_day_survival_smoke.gd
+
+      - name: Time adjustment smoke
+        run: |
+          "${GODOT_BIN}" --headless --path . --script scripts/tests/time_adjustment_smoke.gd
+
+      - name: Wall reveal smoke
+        run: |
+          "${GODOT_BIN}" --headless --path . --script scripts/tests/wall_reveal_smoke.gd
